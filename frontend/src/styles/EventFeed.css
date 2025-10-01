@@ -1,0 +1,267 @@
+/* 🌐 Page Background */
+.event-feed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    background: #f5eeee;  
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    padding-top: 120px; /* Ensure content is below navbar */
+}
+
+/* 🔍 Search & Filter Section */
+.filter-search-container {
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;
+    gap: 25px;  
+    flex-wrap: wrap;
+    background: #f3f3f3;  
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* 🔍 Search Input */
+.search-input {
+    padding: 12px 20px;
+    width: 320px;  
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    max-width: 100%;
+    background: #ffffff;
+    color: #333;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #ff6200;
+    box-shadow: 0 0 10px rgba(255, 98, 0, 0.5);
+}
+
+/* 🔽 Filter Dropdown */
+.filter-dropdown {
+    padding: 12px 20px;
+    border: 1px solid #b0b0b0;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    max-width: 220px;
+    color: #333;
+}
+
+.filter-dropdown:hover {
+    background: #1E90FF;
+    color: #fff;
+}
+
+/* 🛠️ Section Titles */
+.section-title {
+    font-size: 2.5rem;           /* Bigger and bolder */
+    font-weight: 500;            /* Semi-bold */
+    text-align: center;          /* Centered */
+    color: #0e0300;              /* Dark color */
+    text-transform: uppercase;   /* All caps */
+    letter-spacing: 2px;         /* Spacing between letters */
+    margin-bottom: 30px;         /* Space below */
+    margin-top: -10px;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); 
+
+    /* Stylish Underline */
+    border-bottom: 4px solid #FF7B00; 
+    padding-bottom: 10px;
+}
+
+/* 📅 Content Wrapper (Full width for upcoming and notifications) */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+/* 📅 Event Section */
+.event-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 4;
+    width: 100%;
+}
+
+/* 📅 Event Feed (Tasks) */
+.event-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); /* Wider cards */
+    gap: 40px; /* Reduced gap for consistency */
+    width: 100%;
+}
+/* 🔥 Notification Panel */
+.notification-panel {
+    flex: 1;
+    min-width: 350px;
+    background: #f3f3f3;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: fit-content;
+}
+
+/* 📄 Event Card */
+.event-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 35px; /* Increased padding for breathing space */
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Limit card width to avoid over-stretching */
+    margin: 0 auto;
+}
+
+.event-card:hover {
+    background: #fdf1e6;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Event Header with Title and Star */
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* Event Title */
+.event-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(9, 71, 133);
+    margin: 0;
+    flex: 1;
+}
+
+/* ⭐ Star Icon */
+.star-icon {
+    font-size: 28px;
+    cursor: pointer;
+    color: #ccc;
+    transition: all 0.2s ease;
+    margin-left: 15px;
+}
+
+.star-icon:hover {
+    transform: scale(1.2);
+}
+
+.star-icon.starred {
+    color: #ffc107;
+}
+
+/* Event Description */
+.event-card p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* Event Past Message */
+.event-past {
+    color: #ff6200;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* RSVP Button */
+.rsvp-button {
+    background-color: #ff6200;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.rsvp-button:hover {
+    background-color: #e55a00;
+    transform: translateY(-2px);
+}
+
+.rsvp-button.rsvped {
+    background-color: #4CAF50;
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 1200px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .event-feed {
+        width: 100%;
+    }
+
+    .notification-panel {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .event-card {
+        min-width: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .event-feed-container {
+        padding: 20px;
+        padding-top: 100px;
+    }
+    
+    .filter-search-inline {
+        padding: 15px;
+    }
+    
+    .search-input, 
+    .filter-dropdown {
+        width: 100%;
+    }
+    
+    .section-title {
+        font-size: 30px;
+    }
+    
+    .event-card {
+        padding: 20px;
+    }
+    
+    .event-title {
+        font-size: 20px;
+    }
+    
+    .star-icon {
+        font-size: 24px;
+    }
+}
